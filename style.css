@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light_pink: hsl(275, 100%, 97%);
+  --Grayish_purple: hsl(292, 16%, 49%);
+  --Dark_purple: hsl(292, 42%, 14%);
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media screen and (min-width: 500px) {
+  .d-md-block {
+    display: block !important;
+  }
+
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+h1,
+h3 {
+  color: var(--Dark_purple);
+}
+
+.h1-36 {
+  font-size: 36px !important;
+}
+
+@media screen and (min-width: 500px) {
+  .h1-md-46 {
+    font-size: 46px !important;
+  }
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 16px;
+  max-width: 80%;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--Grayish_purple);
+
+  line-height: 1.3rem;
+}
+
+body {
+  background-color: var(--Light_pink);
+  font-family: "Work Sans", sans-serif;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container .card {
+  background-color: var(--White);
+  margin: 8rem 1.5rem;
+  border-radius: 10px;
+
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media (min-width: 500px) {
+  .container .card {
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.container .card .header-faq {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.container .card .header-faq img {
+  display: flex;
+  margin-right: 1.5rem;
+  max-width: 30px;
+  width: 100%;
+}
+
+.container .card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.container .card .content .questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--Light_pink);
+}
+
+.container .card .content .questions:last-child {
+  border-bottom: none;
+}
+
+.container .card .content .question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.answer p {
+  margin-bottom: 2rem;
+}
+
+.answer.visible {
+  max-height: 150px; /* Adjust to fit content, or use a large enough value */
+}
+
+.container .card .content .question img {
+  cursor: pointer;
+}
